@@ -143,7 +143,9 @@ def transpose1():
     rows_3 = [[None]*int(my_dimensions_1[0]) for x in range(int(my_dimensions_1[1]))]
     for i in range(int(my_dimensions_1[1])):
         for j in range(int(my_dimensions_1[0])):
-            rows_3[i][j] =int(rows_1[j][i])
+            rows_3[i][j] =float(rows_1[j][i])
+            if rows_3[i][j] % 1 == 0:
+                rows_3[i][j] = int(rows_3[i][j])
     
     # ans = " ".join(str(y) for x in rows_3 for y in x)
     ans = ""
@@ -171,7 +173,9 @@ def transpose2():
     rows_3 = [[None]*int(my_dimensions_1[0]) for x in range(int(my_dimensions_1[1]))]
     for i in range(int(my_dimensions_1[1])):
         for j in range(int(my_dimensions_1[0])):
-            rows_3[i][j] =int(rows_1[int(my_dimensions_1[0]) - j - 1][int(my_dimensions_1[1]) - i - 1])
+            rows_3[i][j] =float(rows_1[int(my_dimensions_1[0]) - j - 1][int(my_dimensions_1[1]) - i - 1])
+            if rows_3[i][j] % 1 == 0:
+                rows_3[i][j] = int(rows_3[i][j])
     
     # ans = " ".join(str(y) for x in rows_3 for y in x)
     ans = ""
@@ -199,7 +203,9 @@ def transpose3():
     rows_3 = [[None]*int(my_dimensions_1[1]) for x in range(int(my_dimensions_1[0]))]
     for i in range(int(my_dimensions_1[0])):
         for j in range(int(my_dimensions_1[1])):
-            rows_3[i][j] =int(rows_1[i][int(my_dimensions_1[1]) - j - 1])
+            rows_3[i][j] =float(rows_1[i][int(my_dimensions_1[1]) - j - 1])
+            if rows_3[i][j] % 1 == 0:
+                rows_3[i][j] = int(rows_3[i][j])
     
     # ans = " ".join(str(y) for x in rows_3 for y in x)
     ans = ""
@@ -228,7 +234,9 @@ def transpose4():
     rows_3 = [[None]*int(my_dimensions_1[1]) for x in range(int(my_dimensions_1[0]))]
     for i in range(int(my_dimensions_1[0])):
         for j in range(int(my_dimensions_1[1])):
-            rows_3[i][j] =int(rows_1[int(my_dimensions_1[0]) - i - 1][j])
+            rows_3[i][j] =float(rows_1[int(my_dimensions_1[0]) - i - 1][j])
+            if rows_3[i][j] % 1 == 0:
+                rows_3[i][j] = int(rows_3[i][j])
     
     # ans = " ".join(str(y) for x in rows_3 for y in x)
     ans = ""
